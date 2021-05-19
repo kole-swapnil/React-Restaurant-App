@@ -1,15 +1,16 @@
 import logo from './logo.svg';
-import './App.css';
 import { Navbar, NavbarBrand } from 'reactstrap';
+import Menu from './Components/MenuComponent';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar dark color="primary">
         <div className="container">
           <NavbarBrand href="/">SPICYO</NavbarBrand>
         </div>
       </Navbar>
+      <Menu/>
     </div>  
   );
 }
