@@ -3,7 +3,7 @@ export const DISHES =
     {
       id: 0,
       name:'Tanzanian Soup',
-      image: 'assets/images/rs1.png',
+      image: 'assets/images/soup.jpg',
       category: 'mains',
       label:'Hot',
       price:'4.99',
@@ -12,7 +12,7 @@ export const DISHES =
    {
       id: 1,
       name:'Noodles',
-      image: 'assets/images/rs2.png',
+      image: 'assets/images/noodles.jpg',
       category: 'mains',
       label:'',
       price:'1.99',
@@ -21,7 +21,7 @@ export const DISHES =
    {
       id: 2,
       name:'Eggonest',
-      image: 'assets/images/rs3.png',
+      image: 'assets/images/omlet.png',
       category: 'appetizer',
       label:'New',
       price:'1.99',
@@ -29,8 +29,8 @@ export const DISHES =
     },
    {
       id: 3,
-      name:'Sushi Custard',
-      image: 'assets/images/rs4.png',
+      name:'Custard',
+      image: 'assets/images/cust.jpg',
       category: 'dessert',
       label:'',
       price:'2.99',
