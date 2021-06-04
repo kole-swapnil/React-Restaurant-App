@@ -1,30 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import { Navbar, NavbarBrand } from 'reactstrap';
-import Menu from './Components/MenuComponent';
-import { DISHES } from './shared/dishes';
+import MainComponent from './Components/MainComponent';
 
-class App extends Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      dishes: DISHES
-    };
-  }
-
-  render() {
-    console.log(this.state.dishes);
-    return (
-      <div>
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand href="/">SPICYO</NavbarBrand>
-          </div>
-        </Navbar>
-        <Menu dishes={this.state.dishes} />
-      </div>  
-    );
-  }
+function App() {
+  return(<MainComponent/>)
 }
 
 export default App;
