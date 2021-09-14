@@ -1,50 +1,42 @@
-import React, { Component } from "react";
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import React from "react";
+import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
-class DishDetail extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        }
-    }
-
-    render() {
-        if (this.props.selectedDish != null) {
-            let comments = this.props.selectedDish.comments.map((comment) => {
-                return(
-                    <>
-                        <p>{comment.comment}</p>
-                        <p>-- {comment.author}, {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
-                    </>
-                )
-            })
-            return(
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-md-5 m-1">
-                            <Card>
-                                <CardImg width="100%" src={this.props.selectedDish.image} alt={this.props.selectedDish.name}/>
-                                <CardBody>
-                                    <CardTitle>{this.props.selectedDish.name}</CardTitle>
-                                    <CardText>{this.props.selectedDish.description}</CardText>
-                                </CardBody>
-                            </Card>
-                        </div>
-                        <div className="col-12 col-md-5 m-1">
-                            <h3>Comments</h3>
-                            {comments}
-                        </div>
+const DishDetail = (props) => {
+    if (props.selectedDish != null) {
+        let comments = props.selectedDish.comments.map((comment) => {
+            return (
+                <>
+                    <p>{comment.comment}</p>
+                    <p>-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(comment.date)))}</p>
+                </>
+            )
+        })
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 col-md-5 m-1">
+                        <Card>
+                            <CardImg width="100%" src={props.selectedDish.image} alt={props.selectedDish.name} />
+                            <CardBody>
+                                <CardTitle>{props.selectedDish.name}</CardTitle>
+                                <CardText>{props.selectedDish.description}</CardText>
+                            </CardBody>
+                        </Card>
+                    </div>
+                    <div className="col-12 col-md-5 m-1">
+                        <h3>Comments</h3>
+                        {comments}
                     </div>
                 </div>
-            )
-        }
-        else{
-            return(
-                <></>
-            )
-        }
+            </div>
+        )
+    }
+    else {
+        return (
+            <></>
+        )
     }
 }
+
 
 export default DishDetail;
