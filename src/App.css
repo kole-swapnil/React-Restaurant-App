@@ -54,7 +54,13 @@
 .footer{
   background-color: #D1C4E9;
   margin:0px auto;
-  padding: 20px 0px 20px 0px;
+  padding: 4px 0px 4px 0px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 80%;
 }
 .jumbotron {
   padding:70px 30px 70px 30px;
